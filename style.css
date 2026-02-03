@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Fix for ScrollReveal potential flickering */
+.reveal, .reveal-left, .reveal-right {
+    visibility: hidden;
+}
+
 #header {
     width: 100%;
     height: 100vh;
@@ -34,7 +39,7 @@ nav {
 
 .logo {
     width: 140px;
-    z-index: 10; /* Keeps logo above background but manageable */
+    z-index: 10;
 }
 
 nav ul li {
@@ -96,10 +101,14 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
+    width: 250px;           /* පින්තූරයේ පළල */
+    height: 250px;          /* පින්තූරයේ උස */
+    border-radius: 50%;     /* රවුම් හැඩයක් ලබා දීමට */
+    object-fit: cover;      /* පින්තූරය ඇදී නොයෑමට (crop කිරීමට) */
+    border: 5px solid #ff004f; /* රූපය වටා බෝඩරයක් එක් කිරීමට (අවශ්‍ය නම් පමණක්) */
+    display: block;
+    margin: 0 auto;         /* මැදට ගැනීමට */
 }
-
 .about-col-2 {
     flex-basis: 60%;
 }
@@ -367,36 +376,72 @@ form input, form textarea {
     color: #ff004f;
 }
 
-/* --- CSS for small screens --- */
+/* --- Responsive CSS --- */
 nav .fa-solid {
     display: none;
 }
 
+/* --- Certificates Section Styles --- */
+#certificates {
+    padding: 30px 0;
+}
+
+.certificate-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.cert {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.cert i {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #ff004f;
+}
+
+.cert h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.cert a {
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cert:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+.cert:hover i, .cert:hover a {
+    color: #fff;
+}
+
+/* --- Responsive CSS --- */
 @media only screen and (max-width: 600px) {
     #header {
-        /* Adjusted background to ensure logo/text area is clear */
         background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/phone-background.png);
         background-position: top center;
     }
+    .logo { width: 100px; }
+    .header-text { margin-top: 60%; font-size: 18px; text-align: center; }
+    .header-text h1 { font-size: 40px; }
     
-    .logo {
-        width: 100px; /* Smaller logo for mobile */
-    }
-
-    .header-text {
-        margin-top: 60%; /* Adjusted so text doesn't overlap logo */
-        font-size: 18px;
-        text-align: center;
-    }
-    .header-text h1 {
-        font-size: 40px;
-    }
-    
-    nav .fa-solid {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-    }
+    nav .fa-solid { display: block; font-size: 25px; cursor: pointer; }
     nav ul {
         background: #ff004f;
         position: fixed;
@@ -408,36 +453,28 @@ nav .fa-solid {
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
+    nav ul li { display: block; margin: 25px; }
     
-    .sub-title {
-        font-size: 35px;
-        text-align: center;
-    }
-
-    .description-text {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .about-col-1, .about-col-2, .contact-left, .contact-right {
+    .sub-title { font-size: 35px; text-align: center; }
+    .description-text { font-size: 15px; text-align: center; padding: 0 10px; }
+    
+    /* Profile Image Setup for Mobile */
+    .about-col-1 {
         flex-basis: 100%;
+        display: flex;
+        justify-content: center; /* පින්තූරය මැදට ගැනීමට */
+        margin-bottom: 30px;
+    }
+    .about-col-1 img {
+        width: 200px; /* ජංගම දුරකථනයේ ප්‍රමාණය */
+        height: 200px;
+        border-radius: 50%; /* රවුම් හැඩය */
+        object-fit: cover; /* රූපය ඇදී නොයෑමට */
+        border: 4px solid #ff004f; /* වටා ඇති රතු බෝඩරය */
     }
     
-    .tab-titles {
-        justify-content: center;
-    }
-    
-    .tab-links {
-        margin-right: 20px;
-        font-size: 16px;
-    }
-
-    .services-list div, .work {
-        margin: 0 10px;
-    }
+    .about-col-2, .contact-left, .contact-right { flex-basis: 100%; }
+    .tab-titles { justify-content: center; }
+    .tab-links { margin-right: 20px; font-size: 16px; }
+    .services-list div, .work { margin: 0 10px; }
 }
