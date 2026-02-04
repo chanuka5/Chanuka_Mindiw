@@ -64,6 +64,11 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Desktop එකේදී sidebar එකට අදාළ icons සඟවන්න */
+nav .fa-solid {
+    display: none;
+}
+
 /* --- Header Section --- */
 #header {
     width: 100%;
@@ -480,7 +485,14 @@ form input, form textarea {
     .header-text { margin-top: 60%; font-size: 18px; text-align: center; }
     .header-text h1 { font-size: 40px; }
     
-    nav .fa-solid { display: block; font-size: 25px; cursor: pointer; }
+    /* Mobile වලදී පමණක් icons පෙන්වන්න */
+    nav .fa-solid { 
+        display: block; 
+        font-size: 25px; 
+        cursor: pointer; 
+    }
+
+    /* Sidebar styles - Mobile වලට පමණක් සීමා කර ඇත */
     nav ul {
         background: #ff004f;
         position: fixed;
@@ -492,7 +504,19 @@ form input, form textarea {
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li { display: block; margin: 25px; }
+
+    nav ul li { 
+        display: block; 
+        margin: 25px; 
+    }
+
+    /* Sidebar ඇතුළත ඇති Close icon එක සකස් කිරීම */
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
     
     .sub-title { font-size: 35px; text-align: center; }
     .description-text { font-size: 15px; text-align: center; padding: 0 10px; }
