@@ -246,7 +246,7 @@ section {
     flex-wrap: wrap;
 }
 
-/* FIXED IMAGE FRAME STYLING */
+/* UPDATED IMAGE STYLING */
 .hero-image {
     flex-basis: 350px;
     display: flex;
@@ -280,7 +280,6 @@ section {
     left: -15px;
     right: -15px;
     bottom: -15px;
-    background: rgba(14, 165, 233, 0.05);
 }
 
 .image-frame img {
