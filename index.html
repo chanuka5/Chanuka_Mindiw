@@ -2,323 +2,346 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Chanuka Mindiw | Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/4cd8b4019e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <meta name="description" content="Hi, I'm Chanuka Mindiw. I am a dedicated professional focused on delivering meaningful impact through web design, UI/UX, and AI-driven projects. Explore my portfolio and achievements.">
     
-    <meta property="og:title" content="Chanuka Mindiw | Personal Portfolio">
-    <meta property="og:description" content="Explore the personal portfolio of Chanuka Mindiw. Specializing in Web Design, UI/UX, and innovative AI ventures. Dedicated to delivering value and scalable solutions for modern businesses.">
-    <meta property="og:image" content="images/logo.jpeg">
-    <meta property="og:url" content="https://chanuka5.github.io/Chanuka_Mindiw/">
-    <meta property="og:type" content="website">
-    <meta property="og:article:author" content="Chanuka Mindiw">
-    <meta property="article:published_time" content="2024-05-20T09:00:00+05:30">
-    <meta name="author" content="Chanuka Mindiw">
+    <meta name="description" content="Professional portfolio of Chanuka Mindiw. Web Design, UI/UX, and AI-driven solutions.">
 </head>  
 <body>
-<div id="header">
-     <div class="container">
-        <nav>
-            <img src="images/logo.jpeg" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#certificates">Certificates & Achievements</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">CM<span>.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" class="nav-btn" onclick="toggleMenu()">Hire Me</a></li>
             </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text reveal">
-            <p>Transforming Innovative Ideas
-                into Scalable Ventures
-            </p><br>
-            <p><i>Inspiration is fuel and the Identity is the engine.</i></p>
-            <h1>Hi, I'm <span>Chanuka</span><br>Mindiw</h1>
-        </div>
-     </div>
-</div>
-
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1 reveal-left">
-                <img src="images/user.jpeg" alt="About Me Image">
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars-staggered"></i>
             </div>
-            <div class="about-col-2 reveal-right">
-                <h1 class="sub-title">About Me</h1>
-                <p class="description-text">I am a dedicated professional focused on delivering meaningful impact. I thrive in environments that challenge me to think critically and adapt quickly. My goal is always to provide value through reliability, a strong work ethic, and a forward-thinking perspective.</p>
+        </div>
+    </nav>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text reveal-left">
+                <p class="greeting">Hello, I am</p>
+                <h1 class="name">Chanuka Mindiw</h1>
+                <h2 class="title-role">Global Tech Strategist & <span class="highlight">AI Creator</span></h2>
+                <p class="hero-desc">Transforming innovative ideas into scalable, impactful digital ventures. I specialize in crafting modern web experiences and exploring the value of artificial intelligence.</p>
+                <div class="hero-actions">
+                    <a href="#certificates" class="btn btn-primary">View Credentials <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://www.linkedin.com/in/chanuka-mindiw-a839a1251" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Researches</span><br>Self-researching new technologies</li>
-                        <li><span>Business</span><br>Owner of an E-commerce Website</li>
-                        <li><span>AI</span><br>Finding value of AI</li>
-                    </ul>
-                </div>
-                <div id="Experience" class="tab-contents">
-                    <ul>
-                        <li><span>Experience 1</span><br>Project Management</li>
-                        <li><span>Business</span><br>Market Analysis</li>
-                        <li><span>AI</span><br>Prompt Engineering</li>
-                    </ul>
-                </div>
-                <div id="Education" class="tab-contents">
-                    <ul>
-                        <li><span>School 1</span><br>MR/Palatuwa Central College</li>
-                        <li><span>School 2</span><br>St.Thomas College Matara</li>
-                        <li><span>Exam</span><br>Faced Al exam in 2025 with maths stream</li>
-                    </ul>
+            </div>
+            <div class="hero-image reveal-right">
+                <div class="image-frame">
+                    <img src="images/user.png" alt="Chanuka Mindiw">
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div id="certificates">
-    <div class="container">
-        <h1 class="sub-title reveal">Certificates & Achievements</h1>
-        <div class="certificate-list">
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-heading reveal-up">
+                <span class="mono-subtitle">Who I Am</span>
+                <h2>About Me</h2>
+            </div>
+            <div class="about-grid reveal-up">
+                <div class="about-text">
+                    <p>I am a dedicated professional focused on delivering meaningful impact. I thrive in environments that challenge me to think critically and adapt quickly. My goal is always to provide value through reliability, a strong work ethic, and a forward-thinking perspective.</p>
+                    <p>Currently, I am navigating the intersections of web technology, digital business, and artificial intelligence, constantly upskilling to meet the demands of tomorrow.</p>
+                </div>
+                <div class="about-timeline">
+                    <div class="timeline-item">
+                        <i class="fa-solid fa-graduation-cap timeline-icon"></i>
+                        <div>
+                            <h3>A/L Examination (Maths Stream)</h3>
+                            <p>Faced in 2025</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <i class="fa-solid fa-school timeline-icon"></i>
+                        <div>
+                            <h3>St. Thomas College Matara</h3>
+                            <p>Secondary Education</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-heading reveal-up">
+                <span class="mono-subtitle">Expertise</span>
+                <h2>Core Competencies</h2>
+            </div>
+            <div class="skills-container reveal-up">
+                <div class="skill-tag"><i class="fa-solid fa-code"></i> Web Design</div>
+                <div class="skill-tag"><i class="fa-solid fa-robot"></i> Prompt Engineering</div>
+                <div class="skill-tag"><i class="fa-solid fa-chart-pie"></i> Market Analysis</div>
+                <div class="skill-tag"><i class="fa-solid fa-store"></i> E-commerce Management</div>
+                <div class="skill-tag"><i class="fa-brands fa-wordpress"></i> WordPress</div>
+                <div class="skill-tag"><i class="fa-solid fa-network-wired"></i> Professional Networking</div>
+                <div class="skill-tag"><i class="fa-solid fa-magnifying-glass"></i> Self-directed Research</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <div class="section-heading reveal-up">
+                <span class="mono-subtitle">Credentials</span>
+                <h2>Licenses & Certifications</h2>
+                <p class="section-desc">A verified ledger of my continuous learning and professional milestones.</p>
+            </div>
             
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Web Design for Beginners</h3>
+            <div class="cert-grid">
+                
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Web_Design_for_Beginners_E-Certificate.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>University of Moratuwa - CODL. Verified online learning programme covering fundamental web design principles.</p>
-                        <a href="certificates and skills/Web_Design_for_Beginners_E-Certificate.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Web Design for Beginners</h3>
+                    <p class="cert-issuer">University of Moratuwa - CODL</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>E-commerce Management</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Selling Online.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>Hands-on experience in digital business operations and AI-assisted content strategy.</p>
-                        <a href="certificates and skills/Selling Online.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">E-commerce Management</h3>
+                    <p class="cert-issuer">Digital Business Operations</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Microsoft Copilot</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Microsoft Copilot.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>Getting started with Microsoft Copilot.</p>
-                        <a href="certificates and skills/Microsoft Copilot.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Microsoft Copilot</h3>
+                    <p class="cert-issuer">AI Integration</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Digital Business</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Introduction to Digital Business Skills.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>Introduction to Digital Business Skills.</p>
-                        <a href="certificates and skills/Introduction to Digital Business Skills.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Digital Business Skills</h3>
+                    <p class="cert-issuer">Foundational Operations</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Starting a Small Business</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Starting a Small Business.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>I have learned the hard way about starting and running a business while successfully dealing with external pressures..</p>
-                        <a href="certificates and skills/Starting a Small Business.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Starting a Small Business</h3>
+                    <p class="cert-issuer">Business Strategy</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Professional Networking</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Professional Networking for Career Growth.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>Practical networking strategies and personal branding tools to grow professional networks.</p>
-                        <a href="certificates and skills/Professional Networking for Career Growth.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Professional Networking</h3>
+                    <p class="cert-issuer">Career Growth Strategies</p>
                 </div>
-            </div>
 
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>WordPress</h3>
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Introduction to WordPress.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>Have learned about WordPress installation, customization, and management.</p>
-                        <a href="certificates and skills/Introduction to WordPress.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Introduction to WordPress</h3>
+                    <p class="cert-issuer">CMS Management</p>
                 </div>
-            </div>
-            <div class="cert-card reveal">
-                <div class="cert-card-inner">
-                    <div class="cert-card-front">
-                        <i class="fa-solid fa-ribbon"></i>
-                        <h3>Create a Website using WordPress</h3>
+
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-top">
+                        <i class="fa-solid fa-file-pdf cert-file-icon"></i>
+                        <a href="certificates and skills/Coursera wordpress.pdf" target="_blank" class="cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="cert-card-back">
-                        <p>has learned about WordPress tools from Coursera to create websites.</p>
-                        <a href="certificates and skills/Coursera wordpress.pdf" target="_blank">View Certificate</a>
-                    </div>
+                    <h3 class="cert-title">Create a Website using WordPress</h3>
+                    <p class="cert-issuer">Coursera</p>
                 </div>
+
             </div>
-
-
-
         </div>
-    </div>
-</div>
+    </section>
 
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title reveal">My work</h1>
-        <div class="work-list">
-            <div class="work reveal">
-                <img src="images/work-1.jpg">
-                <div class="layer">
-                    <h3>Online Shopping</h3>
-                    <p>High-quality products coming soon.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-heading reveal-up">
+                <span class="mono-subtitle">Selected Work</span>
+                <h2>Portfolio</h2>
             </div>
-            <div class="work reveal">
-                <img src="images/work-2.jpg">
-                <div class="layer">
-                    <h3>Our Business</h3>
-                    <p>Creating value in the job field.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            
+            <div class="project-list">
+                <div class="project-box reveal-up">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-regular fa-folder project-folder"></i>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="project-title">Online Shopping Platform</h3>
+                        <p class="project-info">A high-quality e-commerce platform designed to showcase products with a focus on seamless user experience and modern UI practices. (Coming Soon)</p>
+                        <div class="project-tech"><span>E-commerce</span><span>Web Design</span></div>
+                    </div>
                 </div>
-            </div>
-            <div class="work reveal">
-                <img src="images/work-3.jpg">
-                <div class="layer">
-                    <h3>AI Works</h3>
-                    <p>Innovative AI-driven projects.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                <div class="project-box reveal-up">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-regular fa-folder project-folder"></i>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="project-title">Business Value Creation</h3>
+                        <p class="project-info">A strategic project aimed at creating measurable value within the modern job field, utilizing digital networking and market analysis.</p>
+                        <div class="project-tech"><span>Strategy</span><span>Networking</span></div>
+                    </div>
+                </div>
+
+                <div class="project-box reveal-up">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-regular fa-folder project-folder"></i>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="project-title">AI Integration Works</h3>
+                        <p class="project-info">Exploring the capabilities of generative AI and prompt engineering to optimize workflows and create innovative digital solutions.</p>
+                        <div class="project-tech"><span>Artificial Intelligence</span><span>Prompting</span></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn reveal">See more</a>
-    </div>
-</div>
+    </section>
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left reveal-left">
-                <h1 class="sub-title">Contact</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> chanukamindiw2006@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> 0703331871</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1GUJkS3VjN/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/chanuka200625?igsh=ZjBhZjV5eWV4ZGx1"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/chanuka-mindiw-a839a1251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper reveal-up">
+                <div class="contact-info">
+                    <span class="mono-subtitle">What's Next?</span>
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-text">Whether you have a question, a project idea, or just want to say hi, my inbox is always open. I'll try my best to get back to you!</p>
+                    
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> chanukamindiw2006@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> 0703331871</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Sri Lanka</li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/chanuka-mindiw-a839a1251" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/1GUJkS3VjN/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chanuka200625" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
-                <a href="file.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right reveal-right">
-                <form name="submit-to-google-sheet" action="https://formspree.io/f/mqebapng" method="POST">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
+                
+                <div class="contact-form-container">
+                    <form name="submit-to-google-sheet" action="https://formspree.io/f/mqebapng" method="POST" class="modern-form">
+                        <div class="input-group">
+                            <input type="text" name="Name" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="Email" id="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="Message" id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>© 2026 Chanuka Mindiw. Designed & developed <i class="fa-solid fa-heart"></i> by me.</p>
-    </div>
-</div>
+    </section>
 
-<script>
-    // Tab switching logic
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Chanuka Mindiw</p>
+            <a href="file.pdf" download class="resume-download"><i class="fa-solid fa-download"></i> Download CV</a>
+        </div>
+    </footer>
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
 
-    // Mobile menu logic
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
+        // Advanced ScrollReveal Configuration
+        ScrollReveal({
+            distance: '50px',
+            duration: 1200,
+            delay: 100,
+            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+            reset: false 
+        });
 
-    // Scroll Reveal Animations - Fixed "disappearing" issue
-    ScrollReveal({
-        reset: false, // Set to false so content stays visible after animation
-        distance: '60px',
-        duration: 2000,
-        delay: 200
-    });
+        // Trigger animations
+        ScrollReveal().reveal('.reveal-up', { origin: 'bottom', interval: 150 });
+        ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '80px' });
+        ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '80px' });
 
-    ScrollReveal().reveal('.reveal', { origin: 'bottom' });
-    ScrollReveal().reveal('.reveal-left', { origin: 'left' });
-    ScrollReveal().reveal('.reveal-right', { origin: 'right' });
+        // Form Submission Logic
+        const form = document.forms['submit-to-google-sheet'];
+        const submitBtn = form.querySelector('.submit-btn');
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const originalBtnText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+          
+          fetch(form.action, { 
+            method: 'POST', 
+            body: new FormData(form), 
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(response => {
+              if(response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+              } else {
+                alert("Oops! There was a problem submitting your form");
+              }
+          })
+          .catch(error => console.error('Error!', error.message))
+          .finally(() => {
+              submitBtn.innerHTML = originalBtnText;
+          });
+        });
 
-    // Contact Form Logic
-    const form = document.forms['submit-to-google-sheet']
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(form.action, { 
-        method: 'POST', 
-        body: new FormData(form), 
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-          if(response.ok) {
-            alert("Message sent successfully!");
-            form.reset();
-          }
-      })
-      .catch(error => console.error('Error!', error.message))
-    })
-</script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>  
 </html>
-
-
